@@ -4,6 +4,7 @@
  - [std::conditional](https://blog.csdn.net/photon222/article/details/99327989)
  - [std::declval](https://segmentfault.com/a/1190000040841943)
  - [std::is_constructible](https://blog.csdn.net/hyl999/article/details/120647175?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-2-120647175-blog-101074915.t0_edu_mix&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-2-120647175-blog-101074915.t0_edu_mix&utm_relevant_index=3)
+ - [std::allocator_traits](https://learn.microsoft.com/zh-cn/cpp/standard-library/allocator-traits-class?view=msvc-170)
 ---
 ### **buffer**
 #### **buffer**
