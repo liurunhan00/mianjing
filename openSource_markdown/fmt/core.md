@@ -3,6 +3,7 @@
 ### Traits
  - [std::conditional](https://blog.csdn.net/photon222/article/details/99327989)
  - [std::declval](https://segmentfault.com/a/1190000040841943)
+ - [std::is_constructible](https://blog.csdn.net/hyl999/article/details/120647175?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-2-120647175-blog-101074915.t0_edu_mix&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-2-120647175-blog-101074915.t0_edu_mix&utm_relevant_index=3)
 ---
 ### **buffer**
 #### **buffer**
@@ -210,3 +211,22 @@ TEST(arg_test, make_value_with_custom_context) {
 #### **named_arg_value**
 
 - `which is a pair of {const Char* , int}`
+
+
+
+
+
+### **`print`**
+- `after read fmt these days, i realize read code should from top then go to bottom...`
+
+```c++
+// e.g. fmt::print("Elapsed time: {0:.2f} seconds", 1.23);
+template <typename... T>
+FMT_INLINE void print(format_string<T...> fmt, T&&... args) {
+  const auto& vargs = fmt::make_format_args(args...);
+  return detail::is_utf8() ? vprint(fmt, vargs)
+                           : detail::vprint_mojibake(stdout, fmt, vargs);
+}
+```
+- easy to understand the structure
+  - **args parse**
